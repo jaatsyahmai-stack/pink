@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Login - Aksesa Admin</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+  body{background:linear-gradient(135deg,#FFE6F2 0%,#E6F0FF 100%);min-height:100vh;display:flex;justify-content:center;align-items:center;font-family:'Poppins'}
+  .box{background:rgba(255,255,255,0.9);padding:40px;border-radius:25px;box-shadow:0 10px 30px rgba(255,130,193,0.2);width:90%;max-width:400px;text-align:center;border:2px solid white}
+  h1{color:#FF82C1} p{color:#82B6FF;margin-bottom:25px}
+  input{width:100%;padding:12px;border:2px solid #E6F0FF;border-radius:15px;margin-bottom:15px;background:#FFF8FC}
+  .btn{width:100%;padding:14px;border:none;border-radius:15px;background:linear-gradient(90deg,#FF82C1,#82B6FF);color:white;font-weight:700;cursor:pointer}
+</style>
+</head>
+<body>
+  <div class="box">
+    <h1>🎀 Aksesa Admin 🎀</h1>
+    <p>Login untuk kelola toko aksesoris</p>
+    <input type="text" id="user" placeholder="Username: admin">
+    <input type="password" id="pass" placeholder="Password: 123">
+    <button class="btn" onclick="login()">Masuk</button>
+  </div>
+<script>
+  function login(){
+    if(document.getElementById('user').value=='admin' && document.getElementById('pass').value=='123'){
+      window.location.href='dashboard.html';
+    }else{alert('Username/Password salah!')}
+  }
+</script>
+</body>
+</html>
